@@ -1,0 +1,16 @@
+spring:
+boot:
+admin:
+mail:
+to: ${spring.mail.username}, test@yandex.ru
+from: ${spring.mail.username}
+mail:
+host: smtp.yandex.ru
+username: test@yandex.ru
+password: password
+port: 587
+protocol: smtp
+properties:
+"mail.transport.protocol": smtp
+"mail.smtp.auth": true
+"mail.smtp.starttls.enable": true

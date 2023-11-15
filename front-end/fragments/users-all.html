@@ -1,0 +1,198 @@
+<div class="d-flex justify-content-center">
+    <h5 id="all-users" class="text-center display-4">All Users</h5>
+</div>
+<hr class="display-4"/>
+
+<div class="container mb-3 mt-3">
+    <table id="example" class="display" style="width:100%">
+        <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Birth date</th>
+            <th>Operation</th>
+        </tr>
+        </thead>
+        <tbody class="all-users">
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Birth date</th>
+            <th>Operation</th>
+        </tr>
+        </tfoot>
+    </table>
+
+    <div class="mt-2">
+        <button type="button" id="create_account" class="btn btn-outline-secondary add-new" style="float:left;"><i class="fa fa-user-plus"></i> Create account</button>
+        <button id="refresh-users-button" class="btn btn-outline-info float-right">Refresh</button>
+    </div>
+
+</div>
+
+<div id="edit_modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div style="background-color: rgba(0,0,0,0.8) !important;" class="page-body">
+                <div>
+                    <button id="close-modal-edit" class="link-style-login-modal close mr-2" type="button" data-dismiss="modal">&times;</button>
+                    <div class="card-header">
+                        <h3>Edit Account</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="editor" class="needs-validation" novalidate>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                </div>
+                                <input id="firstName" type="text" class="form-control rounded-right" placeholder="First name" minlength="3" maxlength="100" required>
+                                <div class="invalid-feedback">
+                                    First name should be at least 3 characters
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                </div>
+                                <input id="lastName" type="text" class="form-control rounded-right" placeholder="Last name" minlength="3" maxlength="100" required>
+                                <div class="invalid-feedback">
+                                    Last name should be at least 3 characters
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input id="username_edit" type="text" class="form-control rounded-right" placeholder="Username" minlength="3" maxlength="50" readonly="readonly">
+                                <div class="invalid-feedback">
+                                    Username should be at least 3 characters
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input id="email" type="email" class="form-control rounded-right" placeholder="Mail" maxlength="100" required>
+                                <div class="invalid-feedback">
+                                    Please enter valid mail.
+                                </div>
+                            </div>
+                            <div class= "input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="text" id="datetimepicker_modal" data-toggle="datetimepicker" class="form-control datetimepicker-input rounded-right" data-target="#datetimepicker_modal" placeholder="Date of birth" autocomplete="off" required/>
+                                <div class="invalid-feedback">
+                                    Please enter valid birth date.
+                                </div>
+                            </div>
+                            <div class="mt-2 mb-2">
+                                <div class="form-group float-right">
+                                    <button id="register-user" class="btn btn-light" type="submit">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="create_modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div style="background-color: rgba(0,0,0,0.8) !important;" class="page-body">
+                <div>
+                    <button id="close-modal-create" class="link-style-login-modal close mr-2" type="button" data-dismiss="modal">&times;</button>
+                    <div class="card-header">
+                        <h3>Edit Account</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="create-editor" class="needs-validation-create" novalidate>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                </div>
+                                <input id="first-name-create" type="text" class="form-control rounded-right" placeholder="First name" minlength="3" maxlength="100" required>
+                                <div class="invalid-feedback">
+                                    First name should be at least 3 characters
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                </div>
+                                <input id="last-name-create" type="text" class="form-control rounded-right" placeholder="Last name" minlength="3" maxlength="100" required>
+                                <div class="invalid-feedback">
+                                    Last name should be at least 3 characters
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input id="username-create" type="text" class="form-control rounded-right" placeholder="Username" minlength="3" maxlength="50" required>
+                                <div class="invalid-feedback">
+                                    Username should be at least 3 characters
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input id="email-create" type="email" class="form-control rounded-right" placeholder="Mail" maxlength="100" required>
+                                <div class="invalid-feedback">
+                                    Please enter valid mail.
+                                </div>
+                            </div>
+                            <div class= "input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                </div>
+                                <input type="text" id="datetimepicker_modal_create" data-toggle="datetimepicker" class="form-control datetimepicker-input rounded-right" data-target="#datetimepicker_modal_create" placeholder="Date of birth" autocomplete="off" required/>
+                                <div class="invalid-feedback">
+                                    Please enter valid birth date.
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" id="password-create" class="form-control rounded-right" placeholder="Password" minlength="6" maxlength="20" required>
+                                <div class="invalid-feedback">
+                                    Password should be at least 6 characters
+                                </div>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" id="confirm-password-create" class="form-control rounded-right" placeholder="Confirm password" minlength="6" maxlength="20" required>
+                                <div class="invalid-feedback">
+                                    Password should be at least 6 characters
+                                </div>
+                            </div>
+                            <div class="mt-2 mb-2">
+                                <div class="form-group float-right">
+                                    <button id="create-user" class="btn btn-light" type="submit">Create</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/users-all.js"></script>

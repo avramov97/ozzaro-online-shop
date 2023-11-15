@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="css/login-style.css">
+
+<div id="registered_successfully" class="container mt-2 w-50" hidden="true">
+    <p class="register register-success text-center">Registration completed successfully.<br/>You can log in using your username and password.</p>
+</div>
+
+<div class="container" style="margin-top: 80px;">
+
+    <div class="d-flex justify-content-center h-100">
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Sign in</h3>
+                <div class="d-flex justify-content-end social_icon">
+                    <a href="/oauth2/authorization/facebook"><span><i class="fab fa-facebook-square"></i></span></a>
+                    <a href="/oauth2/authorization/google"><span><i class="fab fa-google-plus-square"></i></span></a>
+                    <span><i class="fab fa-twitter-square"></i></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <form class="needs-validation-login" novalidate>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input id="username" type="text" class="form-control" placeholder="Username" required>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input id="password" type="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <div class="row align-items-center remember">
+                        <input id="rememberMe" name="rememberMe" type="checkbox">
+                        <label class="lblRemember" for="rememberMe"> Remember Me </label>
+                    </div>
+                    <div class="form-group">
+                        <button id="login-user" type="button" class="btn float-right login_btn">Login</button>
+                    </div>
+                    <div id="error_login" class="error mb-5" style="color: red;" hidden="true">
+                        <span>Wrong username or password.</span>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    Don't have an account?<a href="#/users/register">Sign Up</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#">Forgot you password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

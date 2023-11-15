@@ -1,0 +1,138 @@
+<h3 id="intro-sweatshirt-name" class="text-center display-4"></h3>
+<hr class="display-4"/>
+
+<div class="row justify-content-center align-items-center mt-4">
+    <div class="col-4 col-xs-4">
+        <div class="img-container">
+            <img id="modal-img" class="img-responsive">
+        </div>
+        <!--     <img class="logoicon" src="http://placehold.it/300x300/bbb/&text=Your%20Logo" alt="App Logo"/>-->
+    </div>
+    <div id="second-column" class="col-4 col-xs-4">
+        <p class="lead" id="lead"></p>
+        <span id="old-price" class="price old-price-modal">
+
+                        </span>
+        <span id="new-price" class="price promo-price-model ml-2">
+
+                        </span>
+        <div id="saving">
+
+        </div>
+        <div class="rating" id="rating-system">
+
+        </div>
+        <p id="add-to-cart">
+            <!--                            <a href="logs-all.html" class="btn btn-dark btn-block">Додади во количката</a>-->
+            <!--                            <button type="click" class="btn btn-dark btn-block">Додади во количката</button>-->
+        </p>
+        <ul class="list-unstyled" style="line-height: 2">
+            <li><span class="fa fa-check text-success"></span> Брза испорачка</li>
+            <li><span class="fa fa-check text-success"></span> Квалитет</li>
+            <li><span class="fa fa-check text-success"></span> Гаранција</li>
+            <li><span class="fa fa-check text-success"></span> Ефтина цена</li>
+        </ul>
+    </div>
+    <div class="col-4 col-xs-4">
+        <div id="order-col" class="well">
+        </div>
+    </div>
+</div>
+
+<div id="order-success-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <a id="success_close" class="close" href="#" data-dismiss="modal">&times;</a>
+            <div class="page-body">
+                <div class="head">
+                    <h5 style="margin-top:3px;">Успешно извршена порачка</h5>
+                </div>
+                <h1 class="pt-2" style="text-align:center;"><div class="checkmark-circle">
+                    <div class="background"></div>
+                    <div class="checkmark draw"></div>
+                </div>
+                    <p class="pt-4" style="text-align:center;">Ви благодариме!</p>
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cart-success" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <a id="cart-success-close" class="close" href="#" data-dismiss="modal">&times;</a>
+            <div class="page-body">
+                <div class="head">
+                    <h5 style="margin-top:3px;">Успешно додаден продукт во вашата картичката</h5>
+                </div>
+                <h1 class="pt-2" style="text-align:center;"><div class="checkmark-circle">
+                    <div class="background"></div>
+                    <div class="checkmark draw"></div>
+                </div>
+                    <p class="pt-4" style="text-align:center;">Ви благодариме!</p>
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="login-modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" style="max-width: 400px!important;">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div style="background-color: rgba(0,0,0,0.8) !important;" class="page-body">
+                <div>
+                    <button id="close-modal-create" class="link-style-login-modal close mr-2" type="button" data-dismiss="modal">&times;</button>
+                    <div class="card-header">
+                        <h3>Sign in</h3>
+                        <div class="d-flex justify-content-end social_icon">
+                            <a href="/oauth2/authorization/facebook"><span><i class="fab fa-facebook-square"></i></span></a>
+                            <a href="/oauth2/authorization/google"><span><i class="fab fa-google-plus-square"></i></span></a>
+                            <span><i class="fab fa-twitter-square"></i></span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form class="needs-validation-login" novalidate>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input id="username" type="text" class="form-control" placeholder="Username" required>
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input id="password" type="password" class="form-control" placeholder="Password" required>
+                            </div>
+                            <div class="row align-items-center remember">
+                                <input id="rememberMe" name="rememberMe" type="checkbox">
+                                <label class="lblRemember" for="rememberMe"> Remember Me </label>
+                            </div>
+                            <div class="form-group">
+                                <button id="login-user" type="button" class="btn float-right login_btn">Login</button>
+                            </div>
+                            <div id="error_login" class="error mb-5" style="color: red;" hidden="true">
+                                <span>Wrong username or password.</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center links">
+                            Don't have an account?<a id="sign-up-link" href="#">Sign Up</a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="#">Forgot you password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
